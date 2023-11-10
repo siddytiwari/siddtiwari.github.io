@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Control</title>
+    <style>
+        #animation-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: background-color 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="animation-box"></div>
+    <button id="startBtn">Start Animation</button>
+    <button id="stopBtn">Stop Animation</button>
+
+    <script>
+        const animationBox = document.getElementById('animation-box');
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        let animationInterval = null;
+        const colors = ['red', 'blue', 'green', 'yellow', 'black', 'cyan', 'lavender', 'purple', 'orange'];
+        let currentColorIndex = 0;
+
+        function startAnimation() {
+            animationInterval = setInterval(() => {
+                const nextColor = colors[currentColorIndex];
+                animationBox.style.backgroundColor = nextColor;
+
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+            }, 1000);
+        }
+
+        function stopAnimation() {
+            clearInterval(animationInterval);
+            animationInterval = null;
+        }
+
+        startBtn.addEventListener('click', startAnimation);
+        stopBtn.addEventListener('click', stopAnimation);
+    </script>
+</body>
+
+</html>

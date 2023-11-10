@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            var nameField = document.getElementById('name');
+            var emailField = document.getElementById('email');
+            var websiteField = document.getElementById('website');
+            var messageField = document.getElementById('message');
+            var isValid = true;
+
+            // Check if fields are empty
+            if (nameField.value.trim() === '') {
+                nameField.classList.add('error');
+                isValid = false;
+            } else {
+                nameField.classList.remove('error');
+            }
+
+            if (emailField.value.trim() === '') {
+                emailField.classList.add('error');
+                isValid = false;
+            } else {
+                emailField.classList.remove('error');
+            }
+
+            if (websiteField.value.trim() === '') {
+                websiteField.classList.add('error');
+                isValid = false;
+            } else {
+                websiteField.classList.remove('error');
+            }
+
+            if (messageField.value.trim() === '') {
+                messageField.classList.add('error');
+                isValid = false;
+            } else {
+                messageField.classList.remove('error');
+            }
+
+            if (!isValid) {
+                alert('Please fill out all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+           
+        }
+       
+h1 {
+        text-align: center;
+        color: blue;
+    }
+   
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            flex-basis: 30%;
+        }
+
+         input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select {
+            flex-basis: 68%;
+            padding: 10px;
+            margin: 5px 0;  
+            border: 1px solid #000;
+        }
+
+        .option-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+       .option-container div {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            margin-top: 5px;
+           
+        }
+     
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+
+        <div class="form-group">
+            <label for="repassword">Re-enter Password:</label>
+            <input type="password" id="repassword" name="repassword" placeholder="Re-enter your password">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" placeholder="Enter your age">
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="option-container">
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address">
+        </div>
+
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter your state">
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="select">Select a country</option>
+                <option value="usa">USA</option>
+                <option value="india">India</option>
+                <!-- ... You can add more countries as you wish ... -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Language:</label>
+            <div class="option-container">
+                <div>
+                    <input type="checkbox" id="english" name="language" value="english">
+                    <label for="english">English</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="kannada" name="language" value="kannada">
+                    <label for="kannada">Kannada</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hindi" name="language" value="hindi">
+                    <label for="hindi">Hindi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="telugu" name="language" value="telugu">
+                    <label for="telugu">Telugu</label>
+                </div>
+            </div>
+        </div>
+
+         <div class="form-group">
+            <input type="checkbox" id="declaration" name="declaration" required style="flex-grow: 0;">
+            <label for="declaration" style="flex-basis: auto; flex-grow: 1; border-right: none;">Hereby, I declare that all given information is right.</label>
+        </div>
+<div style="text-align: right; margin-top: 10px;">
+    Login to <a href="https://ethnus.com/" target="_blank">Ethnus</a> website
+</div>
+
+<input type="submit" value="Register">
+</div>
+</body>
+
+</html>
